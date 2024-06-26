@@ -1,3 +1,10 @@
 import curses
+from curses import wrapper
 
-print ("hello")
+def main(stdscr):
+    stdscr.clear()
+    stdscr.addstr("Hello world!")
+    stdscr.refresh()
+    stdscr.getkey()
+
+wrapper(main)
